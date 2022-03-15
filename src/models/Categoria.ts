@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface Categoria {
+export interface Categoria {
   uuid: string;
   nome: string;
   descricao: string;

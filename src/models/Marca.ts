@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface Marca {
+export interface Marca {
   uuid: string;
   nome: string;
 }

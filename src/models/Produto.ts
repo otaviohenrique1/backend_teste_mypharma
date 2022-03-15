@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface Produto {
+export interface Produto {
   uuid: string;
   nome: string;
   descricao: string;
