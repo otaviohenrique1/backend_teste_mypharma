@@ -12,7 +12,7 @@ export default {
   },
   async busca(request: Request, response: Response) {
     const { uuid } = request.params;
-    const produto = await MarcaModel.findOne({ uuid });
+    const produto = await MarcaModel.findById({ uuid });
     return response.status(201).json(produto);
   },
   async editar(request: Request, response: Response) {
