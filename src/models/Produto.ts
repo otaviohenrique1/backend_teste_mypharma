@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Document } from "mongoose";
 
-export interface Produto {
+export interface Produto extends Document {
   uuid: string;
   nome: string;
   descricao: string;
@@ -10,7 +10,7 @@ export interface Produto {
   marca: string;
 }
 
-const schema = new Schema<Produto>({
+const produtoSchema: Schema = new Schema({
   uuid: { type: String, required: true },
   nome: { type: String, required: true },
   descricao: { type: String, required: true },
@@ -20,7 +20,7 @@ const schema = new Schema<Produto>({
   marca: { type: String, required: true }
 });
 
-const ProdutoModel = model<Produto>('Produto', schema);
+const ProdutoModel = model<Produto>('Produto', produtoSchema);
 
 export default ProdutoModel;
 
